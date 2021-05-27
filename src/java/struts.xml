@@ -1,0 +1,51 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <constant name="struts.devMode" value="true" />
+    <package name="default" extends="struts-default">
+<!--        <action name="Login" class="controller.loginuser" method="execute">
+            <result name="T">/index.jsp</result>
+            <result name="F">/login.jsp</result>
+           <result name="input">/login.jsp</result>
+        </action>-->
+         
+        <action name="login" class="com.ntp.LoginAction" method="execute">
+            <result name="T">/index.jsp</result>
+            <result name="A">/admin.jsp</result>
+            <result name="F">/login.jsp</result>
+        </action>
+        <action name="logout" class="com.ntp.LogoutAction" method="execute">
+            <result name="T">/index.jsp</result>
+        </action>
+       <action name="RegisterStd" class="com.ntp.DangTin" method="execute">
+            <result name="T">/tindadang.jsp</result>
+            <result name="F">/dangtin.jsp</result>
+        </action>
+        <action name="deleteStudent" class="com.ntp.DeleteStdAction" method="execute">
+            <result name="T">/qluser.jsp</result>
+            <result name="F">/qluser.jsp</result>
+        </action>
+        <action name="xoaphong" class="com.ntp.xoaphong" method="execute">
+            <result name="T">/admin.jsp</result>
+            <result name="F">/admin.jsp</result>
+        </action>
+        <action name="boduyet" class="com.ntp.boduyet" method="execute">
+            <result name="T">/admin.jsp</result>
+            <result name="F">/admin.jsp</result>
+        </action>
+        <action name="duyet" class="com.ntp.duyet" method="execute">
+            <result name="T">/admin.jsp</result>
+            <result name="F">/admin.jsp</result>
+        </action>
+  <action name="dangky" class="com.ntp.DangKyAction" method="execute">
+            <result name="F">/register.jsp</result>
+            <result name="T">/login.jsp</result>
+        </action>
+         <action name="tim" class="com.ntp.TimKiem" method="execute">
+            <result name="T">/index.jsp</result>
+        </action>
+    </package>
+</struts>
